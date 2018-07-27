@@ -1,5 +1,7 @@
 package notepad
 
+import org.springframework.web.servlet.tags.Param
+
 class NotepadController {
 
     def index() {
@@ -11,8 +13,10 @@ class NotepadController {
         [allNotes:allNotes]
     }
 
-    def save() {
+    def saveMethod() {
+
         def saveNotes = new Notepad(params)
+        System.out.println("the value of params in controller = " + params) //scaffold
         saveNotes.save()
         redirect(action: 'current')
     }

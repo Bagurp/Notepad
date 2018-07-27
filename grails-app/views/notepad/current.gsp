@@ -9,7 +9,7 @@
 <body>
 <h1 style = "text-align:center;"><strong>Welcome to Notebook</strong></h1>
 
-    <div class = "box" style="margin-top: 50px">
+    <div class = "text/css" style="margin-top: 50px">
         <table id = "TableNotes" style="color: black">
             <tr>
                 <th style="color: black">Title</th>
@@ -31,15 +31,13 @@
     <div class="footer" style="font-size:13px;">
         <P><h3>Add a new note:</h3></P>
 
-        <g:form controller="Notepad" action="save">
+        <g:form controller="Notepad" action="saveMethod">
             <label>Title:</label>
             <g:textField name="caption" style="color: black"/><br/>
             <label>Description: </label>
             <g:textField name="description" style="color: black"/><br/>
-            <g:actionSubmit value="Save" onclick="return confirm('Confirm add note?')" style="color: black"/>
+            <g:actionSubmit value="SaveMethod" onclick="return confirm('Confirm add note?')" style="color: black"/>
         </g:form>
-
     </div>
 </body>
 </html>
-

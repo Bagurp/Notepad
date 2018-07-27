@@ -1,0 +1,24 @@
+2018-07-26 11:16:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "TESTNOTE" not found; SQL statement:
+SELECT * FROM TESTNOTE  [42102-197]
+2018-07-26 11:19:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE DATABASE[*] STUDENTS"; expected "OR, FORCE, VIEW, ALIAS, SEQUENCE, USER, TRIGGER, ROLE, SCHEMA, CONSTANT, DOMAIN, TYPE, DATATYPE, AGGREGATE, LINKED, MEMORY, CACHED, LOCAL, GLOBAL, TEMP, TEMPORARY, TABLE, SYNONYM, PRIMARY, UNIQUE, HASH, SPATIAL, INDEX"; SQL statement:
+CREATE DATABASE STUDENTS [42001-197]
+2018-07-26 11:20:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "CREATE DATABASE[*] STUDENTS;"; expected "OR, FORCE, VIEW, ALIAS, SEQUENCE, USER, TRIGGER, ROLE, SCHEMA, CONSTANT, DOMAIN, TYPE, DATATYPE, AGGREGATE, LINKED, MEMORY, CACHED, LOCAL, GLOBAL, TEMP, TEMPORARY, TABLE, SYNONYM, PRIMARY, UNIQUE, HASH, SPATIAL, INDEX"; SQL statement:
+CREATE DATABASE STUDENTS; [42001-197]
+2018-07-26 11:23:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "TESTNOTE" not found; SQL statement:
+select * from testnote; [42102-197]
+2018-07-26 11:23:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "TESTNOTE" not found; SQL statement:
+select * from testnote; [42102-197]
+2018-07-26 11:29:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "TESTNOTE" not found; SQL statement:
+SELECT * from TESTNOTE [42102-197]
+2018-07-26 11:36:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "TESTNOTE" not found; SQL statement:
+SELECT * from TESTNOTE [42102-197]
+2018-07-26 11:40:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "TESTNOTE" not found; SQL statement:
+SELECT * from TESTNOTE [42102-197]
