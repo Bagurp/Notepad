@@ -16,15 +16,29 @@ import java.sql.Statement;
 @Mock(Notepad)
 class NotepadControllerTest extends Specification {
 
+    //TODO: Unit tests should not be used to test against databases.
+    // GORM (the persistence framework used by Grails) is not running
+    // during unit tests. The proper place to test such functionality
+    // is within an *integration test*. https://docs.grails.org/latest/guide/testing.html#integrationTesting
+    //
+    // Also, even within an integration test, opening a direct JDBC
+    // connection is brittle and not usually necessary - you can simply
+    // use GORM to check for whether the record was persisted by calling
+    // Notepad.get() (or Notepad.list() to retrieve all of the records) - Zak
+
+    //A better use of unit tests for your controller might be (for example) to check
+    // if a redirect is issued when you expect (like your redirect to the 'current' action)
+
     @Shared
-    Connection conn
+    Connection conn //TODO: As described above, you shouldn't use direct SQL connections
+                    // in a unit test (or really any Grails test, usually)
 
 
     @Shared
-    Statement stmt
+    Statement stmt //TODO: Same as above
 
     @Shared
-    ResultSet rs
+    ResultSet rs //TODO: Same as above
 
     /* Initialization logic here - connection over jdbc to h2 database*/
     def setupSpec() {
@@ -79,7 +93,7 @@ class NotepadControllerTest extends Specification {
 
         when:
         controller.saveMethod()
-        viewDb()
+        viewDb() //TODO: As described above, persistence to the database will not work in a unit test
 
         then:
         response.redirectedUrl == "/notepad/current"
